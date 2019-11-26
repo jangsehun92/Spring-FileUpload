@@ -26,3 +26,10 @@ Spring 파일업로드
       <!-- defaultEncoding -->
       <beans:property name="defaultEncoding" value="utf-8" />
     </beans:bean>
+
+## form( post | multipart/form-data 로 보낸다)
+    <form method="post" action="upload" enctype="multipart/form-data">
+    	<label>파일 : </label> 
+    	<input type="file" name="file">
+    	<input type="submit" value="upload">
+    </form>
