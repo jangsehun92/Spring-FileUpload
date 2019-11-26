@@ -15,4 +15,8 @@ public class FileService {
 		
 		return url;
 	}
+	
+	public boolean writerFile(MultipartFile file) {
+		return true;
+	}
 }
