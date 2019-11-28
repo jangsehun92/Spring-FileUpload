@@ -11,12 +11,12 @@ public class FileService {
 	public String restore(MultipartFile file) {
 		String url = null;
 		
-		
-		
 		return url;
 	}
 	
+	//실제로 파일을 처리하는 함수
 	public boolean writerFile(MultipartFile file) {
+		
 		return true;
 	}
 }
