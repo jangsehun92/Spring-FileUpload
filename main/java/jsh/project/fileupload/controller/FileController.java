@@ -23,6 +23,7 @@ public class FileController {
 	public FileController(FileService fileService) {
 		this.fileService = fileService;
 	}
+	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		return "fileUpload";
