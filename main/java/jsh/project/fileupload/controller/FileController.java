@@ -18,7 +18,7 @@ public class FileController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(FileController.class); 
 	
-	private FileService fileService;
+	private final FileService fileService;
 	
 	public FileController(FileService fileService) {
 		this.fileService = fileService;
@@ -29,11 +29,15 @@ public class FileController {
 		return "fileUpload";
 	}
 	
+	//파일업로드 완료(년월일시분 별 폴더 생성 후 저장)
+	//업로드시 파일 선택 안했다면 뷰단에서 경고(ajax로 처리해도됨)
+	//파일저장에 성공 또는 실패 했다면 로직 추가
 	@RequestMapping(value = "/upload", method = RequestMethod.POST)
 	public String fileUpload(Model model, @RequestParam("file")MultipartFile file) {
-		String url = fileService.restore(file);
-		model.addAttribute("url", url);
-		return "result";
+		fileService.save(file);
+		return "fileUpload";
 	}
+	
+	//파일 다운로드
 	
 }
