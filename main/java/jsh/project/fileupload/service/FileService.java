@@ -19,7 +19,6 @@ public class FileService{
 	public boolean save(MultipartFile file) {
 		String savePath = setFileDirectory();
 		String fileName = setSaveName(file.getOriginalFilename());
-		writerFile(savePath, file, fileName);
 		return writerFile(savePath, file, fileName);
 	}
 	
