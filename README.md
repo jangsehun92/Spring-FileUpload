@@ -1,5 +1,5 @@
 # Spring-FileUpload
-Spring에서 파일업로드 
+Spring 파일업로드 
 
 구현 기능 : 연월일시분 기준 폴더 생성 및 저장
 
